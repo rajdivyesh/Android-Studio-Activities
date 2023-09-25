@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Cloud Image -->
+    <ImageView
+        android:id="@+id/cloudImageView"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/cloud"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <!-- Pargol Label -->
+    <TextView
+        android:id="@+id/pargolLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pargol Activity"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/cloudImageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Radio Activity Label -->
+    <TextView
+        android:id="@+id/radioActivityLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Radio Activity"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        android:layout_marginTop="55dp"
+        app:layout_constraintTop_toBottomOf="@+id/pargolLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Radio Group with Radio Buttons -->
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="55dp"
+        app:layout_constraintTop_toBottomOf="@+id/radioActivityLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5">
+
+        <!-- Cat Radio Button -->
+        <LinearLayout
+            android:id="@+id/image2Layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@color/gray"
+            android:layout_marginRight="5dp">
+            <RadioButton
+                android:id="@+id/radio1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|end"
+                android:layout_marginLeft="30dp"
+                android:outlineSpotShadowColor="@color/purple"
+                android:outlineAmbientShadowColor="@color/purple"
+                android:shadowColor="@color/purple"/>
+
+            <ImageButton
+                android:id="@+id/image2Button"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:src="@drawable/cat"
+                android:scaleType="fitCenter"
+                android:background="?android:selectableItemBackground"
+                android:onClick="onImageClick"
+                android:contentDescription="Cat" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Cat"></TextView>
+        </LinearLayout>
+
+        <!-- Dog Radio Button -->
+        <LinearLayout
+            android:id="@+id/image1Layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@color/gray"
+            android:layout_marginRight="5dp">
+            <RadioButton
+                android:id="@+id/radio2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|end"/>
+
+            <ImageButton
+                android:id="@+id/image1Button"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:src="@drawable/dog"
+                android:scaleType="fitCenter"
+                android:background="?android:selectableItemBackground"
+                android:onClick="onImageClick"
+                android:contentDescription="Cat" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Dog"></TextView>
+        </LinearLayout>
+
+        <!-- Elephant Radio Button -->
+        <LinearLayout
+            android:id="@+id/image3Layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@color/gray"
+            android:layout_marginRight="5dp">
+            <RadioButton
+                android:id="@+id/radio3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|end"/>
+
+            <ImageButton
+                android:id="@+id/image3Button"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:src="@drawable/elephant"
+                android:scaleType="fitCenter"
+                android:background="?android:selectableItemBackground"
+                android:onClick="onImageClick"
+                android:contentDescription="Cat" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Elephant"></TextView>
+        </LinearLayout>
+
+        <!-- Monkey Radio Button -->
+        <LinearLayout
+            android:id="@+id/image4Layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@color/gray">
+            <RadioButton
+                android:id="@+id/radio4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|end"/>
+
+            <ImageButton
+                android:id="@+id/image4Button"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:src="@drawable/monkey"
+                android:scaleType="fitCenter"
+                android:background="?android:selectableItemBackground"
+                android:onClick="onImageClick"
+                android:contentDescription="Cat" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Monkey"></TextView>
+        </LinearLayout>
+    </RadioGroup>
+
+    <!-- Submit Button -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/submitBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Submit"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:padding="16dp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="@color/purple"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Spinner with Heart Incrementing to 5 -->
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.556"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/submitBtn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
